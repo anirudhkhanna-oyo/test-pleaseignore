@@ -35,8 +35,12 @@ amphtmlpart = MIMEText(BODY_AMPHTML.encode(CHARSET), 'x-amp-html', CHARSET)
 # Add the text and HTML parts to the child container.
 msg_body.attach(htmlpart)
 msg_body.attach(amphtmlpart)
-.
-.
+
+...
+
+response = client.send_raw_email(...)
+
+
 .
 try:
     #Provide the contents of the email.
