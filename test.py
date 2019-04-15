@@ -28,11 +28,11 @@ BODY_AMPHTML = """\
 .
 .
 .
-# Encode the text and HTML content and set the character encoding.
+# Set content types for HTML and AMP parts of the MIME-Tree
 htmlpart = MIMEText(BODY_HTML.encode(CHARSET), 'html', CHARSET)
 amphtmlpart = MIMEText(BODY_AMPHTML.encode(CHARSET), 'x-amp-html', CHARSET)
 
-# Add the text and HTML parts to the child container.
+# Add the MIME parts to your message!
 msg_body.attach(htmlpart)
 msg_body.attach(amphtmlpart)
 
